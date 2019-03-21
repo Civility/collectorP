@@ -4,11 +4,12 @@
     }
     .slider {
         .mini-slider {
+            @extend .text-center;
             @extend .px-4;
             @extend .my-2;
             @extend .d-flex;
-            @extend .flex-column;
-            // @extend .justify-content-around;
+            @extend .flex-lg-column;
+            @extend .flex-row;
             @extend .justify-content-center;
             .slide-img {
                 @extend .px-4;
@@ -24,15 +25,15 @@
             .icon {
                 @extend .text-center;
                 @extend .m-0;
+                @extend .d-flex;
+                @extend .align-items-center;
+                @extend .justify-content-center;
             }
         }
         .big-slider {
             @extend .d-flex;
             @extend .justify-content-center;
             @extend .align-items-center;
-            img {
-                width: 600px;
-            }
         }
     }
     .specific-main {

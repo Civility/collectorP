@@ -27,7 +27,8 @@ section, aside, article {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    // height: 50vh;
+    height: 30.5rem;
 }
 .banner-mini {
     background-image: url('../img/banner/banner_mini.jpg');
@@ -119,4 +120,12 @@ section, aside, article {
         }
     }
 }
-
+.previous-flex {
+    @extend .d-flex;
+    @extend .justify-content-lg-between;
+    @extend .justify-content-center;
+    @extend .m-auto;
+    .card-body {
+        @extend .text-center;
+    }
+}

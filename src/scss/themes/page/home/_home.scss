@@ -1,0 +1,12 @@
+.home-page {
+    @import './banners.scss';
+    @import './aside.scss';
+    @import './compilation.scss';
+    @import './contact_us.scss';
+    .col-flex {
+        @extend .col-12;
+        @extend .col-sm-6;
+        @extend .col-md-4;
+        @extend .col-lg-3;
+    }
+}
