@@ -1,0 +1,19 @@
+-
+    var rout = [
+        {'name': 'Путешествия', 'link' : "./category.html", 'icon' : 'tree'},
+        {'name': 'Дом', 'link' : "./category.html", 'icon' : 'home'},
+        {'name': 'Отдых', 'link' : "./category.html", 'icon' : 'coffee'},
+        {'name': 'Офис', 'link' : "./category.html", 'icon' : 'paperclip'},
+        {'name': 'Красота', 'link' : "./category.html", 'icon' : 'envira'}
+    ];
+nav.navbar.navbar-expand-lg.card.navbar-dark
+    h2.navbar-title Категории
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+    #categoriesMenu.collapse.navbar-collapse
+        .list-group.list-group-flush
+            each val, index in rout
+                a(href=val.link, title=val.name).list-group-item.list-group-item-action
+                    button.btn.btn-link.text-muted(type="button").d-inline-flex.align-items-center
+                        i.fa(aria-hidden="true" class='fa-' + val.icon)
+                        =val.name

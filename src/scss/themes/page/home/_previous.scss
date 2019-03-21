@@ -1,0 +1,32 @@
+.previous {
+    @extend .mb-3;
+    @extend .py-3;
+    // .cards {
+    //     @extend .justify-content-md-between;
+    // }
+    .card {
+        @extend .bg-transparent;
+        border: none;
+        @extend .mb-4;
+        @extend .mx-0;
+        // max-width: 300px;
+    }
+    .card-img-top {
+        @extend .px-3;
+    }    
+    .card-body {
+        @extend .small;
+        @extend .px-3;
+        @extend .text-center;
+    }
+    .card-title, .price {
+        @extend .font-weight-bold;
+        @extend .text-uppercase;            
+    }
+}
+.product-desc {
+    @extend .bg-light;
+}
+.product-desc {
+    @extend .py-5;
+}

@@ -1,0 +1,26 @@
+.banners {
+    .row {
+        @extend .px-5;
+    }
+    @extend .text-warning;
+    .lead-tetle {
+        @extend .display-3;
+        @extend .font-weight-bold;
+        @extend .text-uppercase;
+        letter-spacing: .2em;
+    }
+    .text {
+        @extend .my-lg-4;
+        @extend .my-md-3;
+        @extend .my-2;
+        @extend .h3;
+        span {
+            @extend .text-danger;
+        }
+    }
+    .btn {
+        @extend .text-uppercase;
+        @extend .btn-outline-warning;
+        width: 15rem;
+    }
+}

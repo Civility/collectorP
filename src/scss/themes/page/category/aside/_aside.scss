@@ -1,0 +1,50 @@
+.type {
+    .btn {
+        &.collapsed {
+            .fa-minus {
+                &:before {
+                    content: "\f067"
+                }
+            }
+        }
+        .show {
+            .fa-minus {
+                &:before {
+                    content: "\f068"
+                }
+            }
+        }
+    }
+}
+//price
+.filter{
+    .custom-control{
+        @extend .py-3;
+        @extend .list-group-item;
+        &:last-child {
+            @extend .border-bottom-0;
+        }
+    }
+    .custom-control-label{
+        @extend .pl-4;
+    }
+    .searce {
+        @extend .mb-3;
+    }
+    .custom-control-label {   
+        &[for="Check2"] {
+            color:red;
+            @extend .font-weight-bold;
+        }
+    }
+}
+.type, .price, .filter {
+    .title-card {
+        @extend .h5;
+        @extend .text-uppercase;
+        @extend .font-weight-bold;
+    }
+    .title-card{
+        @extend .h5;
+    }
+}

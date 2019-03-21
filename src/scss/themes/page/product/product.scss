@@ -1,0 +1,92 @@
+.product-page {
+    .product {
+        @extend .bg-white;
+    }
+    .slider {
+        .mini-slider {
+            @extend .px-4;
+            @extend .my-2;
+            @extend .d-flex;
+            @extend .flex-column;
+            // @extend .justify-content-around;
+            @extend .justify-content-center;
+            .slide-img {
+                @extend .px-4;
+                @extend .py-2;
+            }
+            .opacity{
+                opacity: .5;
+            }          
+            .img-fluid {
+                @extend .border;
+                @extend .border-dark;
+            }
+            .icon {
+                @extend .text-center;
+                @extend .m-0;
+            }
+        }
+        .big-slider {
+            @extend .d-flex;
+            @extend .justify-content-center;
+            @extend .align-items-center;
+            img {
+                width: 600px;
+            }
+        }
+    }
+    .specific-main {
+        strong {
+            @extend .col-4;
+        }
+    }
+    .specific-main-price {
+        @extend .d-flex;
+        @extend .border-right;
+        .price {
+            @extend .align-self-center;
+        }
+    }
+    .specific-main-color {
+        @extend .my-2;
+        @extend .d-inline-flex;
+        @extend .justify-content-around;
+        @extend .align-items-center;
+        strong {
+            @extend .text-left;
+        }
+        .specific-circle {
+            @extend .col-6;
+            @extend .d-flex;
+        }
+    }
+    .list-group-item {
+        @extend .p-4;
+    }
+    .specific-main-number {
+        @extend .my-2;
+        @extend .d-flex;
+        @extend .justify-content-between;
+        @extend .align-items-center;
+    }
+    .number-box {
+        @extend .col-6;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .justify-content-around;
+        @extend .py-2;
+        @extend .border;
+        @extend .shadow-sm;
+    }
+    .specific-desc {
+        @extend .small;
+        @extend .py-2;
+    }
+    .delivery {
+        @extend .justify-content-around;
+        @extend .align-items-center;
+        span {
+            @extend .small;
+        }
+    }
+}

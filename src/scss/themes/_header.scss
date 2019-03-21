@@ -1,0 +1,51 @@
+.header { /* header */
+    .top {
+        @extend .align-items-center;
+        @extend .my-3;
+        @extend .py-3;
+    }
+    .logo {
+        text-align: center;
+        @include media-breakpoint-up(lg) {text-align: left;}
+    }
+    .navbar-brand {
+        @extend .font-weight-bold;
+        @extend .h2;
+    }
+    .search {
+        @extend .my-lg-0;
+        @extend .my-2;
+        @extend .flex-nowrap;
+        input {
+            @extend .flex-fill;
+        }
+        button {
+            @extend .btn-warning;
+            @extend .my-2;
+            @extend .my-sm-0;
+            @extend .text-uppercase;
+        }
+    }
+    .navigation {
+        @extend  .justify-content-start;
+        @extend  .offset-3;
+    }
+    .menu-user {
+            @extend .text-center;
+            @include media-breakpoint-up(xl) {text-align: right;}
+        a {
+           @extend .mr-3;
+        }
+    }
+    .nav-item {
+        @extend .mx-3;
+        @include hover-focus {
+        }
+    }
+}
+.breadcrumbs {
+    background-color: $breadcrumb-bg;
+    ol {
+        @extend .my-1;
+    }
+}

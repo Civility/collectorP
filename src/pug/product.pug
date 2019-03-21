@@ -1,0 +1,66 @@
+doctype html
+html(lang='ru-Ru')
+    head
+        include ./content/head.pug
+    body.product-page
+        header.header
+            include ./content/header.pug
+            .breadcrumbs
+                .container-fluid
+                    .row.w-100
+                        include ./pages/product/nav/breadcrumbs.pug
+        main
+            section.product
+                .container
+                    .row.product-box
+                        .col-12.col-lg-6
+                            .slider
+                                .row
+                                    include ./pages/product/aside/slider.pug
+                        .col-12.col-lg-6
+                            .specific
+                                .row
+                                    include ./pages/product/product.pug
+                .container
+                    .row
+                        .col-12
+                            h4.title-list Характериситки:
+                            //- include ./pages/product/specification.pug
+
+            section
+                aside.product-desc
+                    .container
+                        .row
+                            .col-12
+                                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum consequuntur magni quia molestiae voluptas non, adipisci ducimus? Doloribus nemo neque repellendus saepe non voluptas quo, velit odit, maiores consectetur exercitationem architecto natus placeat quod fugit? Perferendis fugit libero quibusdam sequi illum labore numquam maiores eius, in aspernatur. Similique, odio. Iusto doloremque dolor unde corporis numquam aspernatur nobis architecto dolore tenetur, eius repellat natus suscipit at, exercitationem rem impedit labore consequatur, veritatis nihil harum consequuntur quae fugiat possimus vero! Hic quae aspernatur, non iste aliquid voluptatibus voluptas. Repellat, consequuntur veniam ducimus nemo voluptatibus quis sed dicta nulla. Eligendi, nulla quos. Tempora, mollitia corrupti modi eum perferendis odio eveniet a! Numquam, exercitationem nesciunt adipisci distinctio nobis reiciendis officiis aliquid tempore consectetur quia illo officia eveniet error eligendi maiores? Repellat eos quibusdam ipsa illo reprehenderit accusamus tenetur nemo laudantium? Eveniet quidem, accusantium at a suscipit deserunt, laboriosam minima atque consequuntur tempore magnam.            
+                .container
+                    .row
+                        .col-12
+                            .title С этим покупают
+                            .previous
+                                include ./pages/home/previous.pug
+            section
+                .container
+                    .row
+                        .col-12
+                            .title Ранее просмотренное
+                            .previous    
+                                include ./pages/home/previous.pug
+            section.col-12
+                .container
+                    h2.title-left Популярные товары
+                    .popular
+                        .card-deck
+                            .col-12.col-md-3.col-lg-3
+                                include ./content/product/bag.pug
+                            .col-12.col-md-3.col-lg-3    
+                                include ./content/product/box.pug
+                            .col-12.col-md-3.col-lg-3
+                                include ./content/product/bag.pug
+                            .col-12.col-md-3.col-lg-3
+                                include ./content/product/jbl.pug
+        footer
+            .footer
+                .container-fluid.p-0
+                    include ./content/footer.pug
+    include ./content/scripts.pug

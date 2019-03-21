@@ -1,0 +1,52 @@
+doctype html
+html(lang='ru-Ru')
+	head
+		include ./content/head.pug
+	body.home-page
+		header.header
+			include ./content/header.pug
+			.menu
+				.container-fluid.p-0
+					include ./content/nav/nav.pug
+		main
+			.container
+				.stock
+					.row
+						aside.col-lg-3.col-12
+							.categoriesMenu
+								include ./content/nav/categoriesMenu.pug
+							.subscribe
+								include ./pages/home/aside/subscribe.pug
+						section.col-lg-9.col-12
+							.banners
+								include ./pages/home/banner.pug
+				section
+					.popular
+						.row
+							.col-12
+								h2.title-left Популярные товары
+								.row
+									.card-deck
+										include ./content/product/forProduct.pug
+				.line
+					hr
+				section
+					.compilation
+						.row
+							.col-12
+								.title Подборки
+							include ./pages/home/compilation.pug
+				section
+					.previous
+						.row
+							.col-12
+								.title Ранее просмотренное
+								include ./pages/home/previous.pug
+		article
+			.container
+				include ./pages/home/contact_us.pug
+		footer
+			.footer
+				.container-fluid.p-0
+					include ./content/footer.pug
+	include ./content/scripts.pug

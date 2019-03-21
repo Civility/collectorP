@@ -1,0 +1,8 @@
+.compilation {
+    .title {
+        @extend .text-center;
+    }
+    .jumbotron {
+        height: 20rem;
+    }
+}

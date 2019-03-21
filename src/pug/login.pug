@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru-Ru')
+	head
+		include ./content/head.pug
+	body.login
+		main
+			.container
+				.row
+					.col-12
+						h3.title Вход			
+				form.form
+					.row
+						.col-12
+							.form-group
+								label.text-muted.col-form-label-sm(for="Name") Ваше Имя
+								input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей Сюткин")
+								.valid-tooltip Введите Имя
+						.col-12
+							.form-group
+								label.text-muted.col-form-label-sm(for="password") Пароль
+								input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
+								.valid-tooltip Введите Пароль
+					.row
+						.col-12
+							button.send.btn(type="submit")
+								| Вход
+						.col-12
+							a(href="#", title="title")
+								button.reg.btn(type="button")
+									| Регистрация
+	include ./content/scripts.pug

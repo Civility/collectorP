@@ -1,0 +1,48 @@
+.col-12.list-group.list-group-flush
+    .list-group-item
+        .page-title Заголовок
+           br 
+           | Наименование товара
+    .list-group-item
+        .row.specific-main
+            .col-2.specific-main-price
+                .price $15
+            .col-10
+                .row
+                    .col-12.col-lg-6.specific-main-color
+                        strong Цвет:
+                        .specific-circle
+                            a(href="#")
+                                .rounded-circle.border.border-dark.circle
+                            a(href="#")
+                                .rounded-circle.border.border-light.bg-dark.circle.
+                    .col-12.col-lg-6.specific-main-number     
+                        strong Количество:
+                        .number-box
+                            a.h4(href="") 
+                                strong &minus;
+                                //- i.fa.fa-minus
+                            h4 2
+                            a.h4(href="") 
+                                strong &plus;
+                                //- i.fa.fa-plus
+    .list-group-item
+        .row
+            .col-12.specific-desc                    
+                .text-justify
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sapiente modi a ratione veniam aspernatur fugiat ut quas quidem perspiciatis omnis totam itaque dolor facere autem placeat perferendis, enim ipsam! Atque, inventore. Dolorum illo reprehenderit commodi ipsa vitae magni quia, officia quisquam officiis quae? Aspernatur, numquam saepe! Dolorum, distinctio ipsa.
+    .list-group-item
+        .row
+            .col-6
+                include ./../../content/product/btn/btn.pug
+            .col-6
+                .row.delivery
+                    .col-2.mr-2
+                        i.fa.fa-truck.fa-2x
+                    .col
+                        span Доставка 30 ноября - 3 декабря - 249
+                            =' '
+                            i.fa.fa-rub
+                        span Самовывоз 29-30 ноября - 99
+                            =' '
+                            i.fa.fa-rub

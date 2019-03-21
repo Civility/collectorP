@@ -1,0 +1,20 @@
+.category-page {
+    @import './aside/aside.scss';
+    aside {
+        .card {
+            @extend .border-secondary;
+            @extend .border-0;
+        }
+        .card-body {
+            @extend .px-5;
+        }
+        .card-header {
+            @extend .bg-secondary;
+            @extend .text-uppercase;
+            @extend .font-weight-bold;
+        }
+        .custom-range{
+            @extend .my-3;
+        }
+    }
+}

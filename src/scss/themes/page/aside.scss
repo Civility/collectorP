@@ -1,0 +1,57 @@
+aside {   
+    .navbar {
+        @extend .flex-column;
+        @extend .bg-white;
+        @extend .p-0;
+        @extend .mt-3;
+        .navbar-collapse {
+           @extend .w-100;
+           @extend .px-4;
+            // @extend .w-75;
+        }
+        .list-group {
+            @extend .w-100;
+            @extend %letter;
+        }
+        .navbar-title {
+            background-color: $gray-200;
+            @extend .d-flex;
+            @extend .justify-content-around;
+            @extend .justify-content-lg-start;
+            @extend .align-items-center;
+            @extend .w-100;
+            @extend .h5;
+            @extend .m-0;
+            @extend .py-4;
+            @extend .px-5;
+            @extend .text-uppercase;
+            @extend .font-weight-bold;
+        }
+        .list-group-item {
+            @extend .py-4;
+            &:last-child {
+                @extend .mb-4;
+            }
+        }
+        a {
+            @include hover-focus {
+                .btn {
+                   @extend .text-warning;
+                }
+            }
+        }
+        .btn {
+            @extend .list-unstyled;
+            @include hover-focus {
+                @extend .text-decoration-none;
+            }
+        }       
+        .list-group-item-action {
+            i {
+                &:before {
+                    @extend .mr-3;
+                }
+            }
+        }  
+    }
+}

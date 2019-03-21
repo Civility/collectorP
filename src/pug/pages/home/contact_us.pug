@@ -1,0 +1,28 @@
+.contact_us
+    .row
+        .col-12.title Свяжитесь с нами
+    .row
+        .col-12
+            form
+                .row.justify-content-center
+                    .col-4
+                        .row
+                            .col-12
+                                .form-group
+                                    label.text-muted.col-form-label-sm(for="Name") Ваше Имя
+                                    input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей Сюткин")
+                                    .valid-tooltip Введите Имя
+                            .col-12
+                                .form-group
+                                    label.text-muted.col-form-label-sm(for="Email") E-mail
+                                    input#Email.form-control(type="email" placeholder="Введите E-mail" value="email@email.ru")
+                                    .valid-tooltip Введите E-mail
+                    .col-4
+                        .row
+                            .col-12
+                                .form-group
+                                    label.text-muted.col-form-label-sm(for="Message") Ваше сообщение
+                                    textarea#Message.form-control(type="text" name="message" rows="5" required="required" placeholder="Введите сообщение")
+                .row.justify-content-center
+                    button.send.btn(type="submit")
+                        | Отправить сообщение

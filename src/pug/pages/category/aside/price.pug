@@ -1,0 +1,13 @@
+.card
+    .card-header 
+        h3.title-card Цена, в
+    .card-body
+        .form-group.form-row
+            label(for="customRange")
+            input#customRange(type="range" min="0" max="100").custom-range
+        .form-group.form-row      
+            label(for="from").col-sm-2.col-form-label от
+            input#from(type="number" required).col-sm-3.form-control
+            label(for="to").col-sm-2.col-form-label до
+            input#to(type="number" required).col-sm-3.form-control 
+            label.col-sm-2.col-form-label $

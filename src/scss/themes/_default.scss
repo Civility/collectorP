@@ -1,0 +1,122 @@
+html {
+    @extend .h-100;
+}
+main {
+    @extend .h-100;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .flex-grow-1;
+    @extend .bg-light;
+    @extend .my-3;
+    .line {
+        @extend .m-5;
+        @extend .shadow-sm;
+    }
+}
+section, aside, article {
+    @extend .pb-3;
+}
+%letter {
+    &::first-letter {
+        @extend .text-capitalize;
+    }
+}
+
+.jumbotron {
+    background-image: url('../img/banner/banner.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+.banner-mini {
+    background-image: url('../img/banner/banner_mini.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+}
+.send, .reg, .searce {
+    @extend .text-center;
+    @extend .btn-lg;
+    @extend .font-weight-bold;
+    @extend .text-uppercase;     
+    font-size: $font-size-sm;
+    @extend .my-3;
+    @extend .py-3;
+}
+.send, .searce {
+    @extend .btn-warning;
+}
+.reg {
+    @extend .btn-link;
+}
+.page-title {
+    @extend .h2;
+    @extend %letter;
+    @extend .py-4;
+    @extend .text-uppercase;
+    @extend .font-weight-bold;
+}
+.title {
+    @extend .font-weight-bold;
+    @extend .text-uppercase;
+    @extend .h4;
+    // @extend .pb-3;
+    @extend .my-5;
+    text-align: center;
+}
+.title-left {
+    text-align: left;
+    @extend .title;
+    @extend .p-0;
+    @extend .m-0;
+    @extend .mb-3;
+}
+.badge {
+    @extend .small;
+}
+.badge {
+    @extend .mr-3;
+    @extend .my-3;
+    .close {
+        @extend .d-flex;
+        @extend .align-items-center;
+        span {
+            @extend .position-relative;
+            bottom: .1em;
+        }
+    }
+}
+.badge-name{
+    @extend .mx-5;
+    @extend .my-auto;
+    @extend .py-2;
+    @extend .h6;
+    @extend .float-left;
+}
+.fa {
+    @extend .mr-2;
+}
+.price {
+    @extend .h3;
+}
+.circle {
+    width: 3rem;
+    height: 3rem;
+    @extend .mx-1;
+}
+.btn-sale {
+    border-radius: 0;
+    @extend .btn-primary;
+    @extend .px-4;
+    @extend .py-2;
+    @extend .text-uppercase;
+    @extend .font-weight-bold;
+    i {
+        &:before {
+            @extend .mr-1;
+        }
+    }
+}
+

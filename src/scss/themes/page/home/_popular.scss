@@ -1,0 +1,57 @@
+.popular {
+    @extend .font-weight-bold;
+    @extend .text-uppercase;
+    .card-deck {
+        & > div {
+            @extend .mb-4;
+        }
+    }
+    .card {
+        @extend .mx-0;
+        @extend .h-100;
+        @include hover {
+            @extend .border-warning;
+        }
+        @include hover-focus {
+            .btn {
+                visibility: visible;
+            }
+        }
+    }
+    .badge {
+        @extend .badge-danger;
+        @extend .float-right;
+        @extend .px-4;
+        @extend .py-1;
+    }   
+    img {
+        @extend .p-3;
+    }
+    .card-body {
+        @extend .text-center;
+        @extend .align-self-center;
+        @extend .d-flex;
+        @extend .flex-column;
+        @extend .justify-content-between;        
+    }
+    .card-footer {
+        @extend .bg-white;
+        @extend .d-flex;
+        @extend .justify-content-center;
+    }
+    .btn {
+        visibility: hidden;
+        // @extend .py-2;
+        // @extend .px-3;
+        // border-radius: 0;
+        // @extend .btn-warning;
+        // @extend .text-uppercase;
+        // font-size: $font-size-base - 0.2;
+        // @extend .font-weight-bold;
+        // i {
+        //     &:before {
+        //         @extend .mr-1;
+        //     }
+        // }
+    }
+}

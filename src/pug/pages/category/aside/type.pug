@@ -1,0 +1,30 @@
+.card
+    .card-header 
+        h3.title-card Тип
+    .card-body
+        #accordion.accordion
+            each val, index in ['Электроника', 'Одежда', 'Сувениры', 'Аксессуары', 'Сертификаты']
+                .card
+                    span(id='heading-' + index).nav
+                        button(
+                            type="button" 
+                            data-toggle="collapse" 
+                            data-target='#collapse-' + index
+                            aria-expanded="true" 
+                            aria-controls='collapse-' + index
+                            ).btn.btn-link.collapsed
+                            .fa.fa-minus
+                            = val
+                    span.collapse(
+                            id='collapse-' + index
+                            aria-labelledby='heading-' + index 
+                            data-parent="#accordion"
+                        )
+                        ul.card-body.nav.flex-column
+                            li.nav-item
+                                a(href="#", title="title" role="button" aria-pressed="true").nav-link Ссылка
+                            li.nav-item
+                                a(href="#", title="title" role="button" aria-pressed="true").nav-link Ссылка
+                            li.nav-item
+                                a(href="#", title="title" role="button" aria-pressed="true").nav-link Ссылка
+                            

@@ -1,0 +1,16 @@
+.contact_us {
+    @extend .mb-5;
+    @extend .pb-5;
+    .title {
+        @extend .text-center;
+    }
+    .form-control {
+        border: none;
+        border-bottom: 1px solid $black;
+        border-radius: 0;
+        @include hover-focus {
+            @extend .shadow-none;
+            outline: 0;
+        }
+    }
+}

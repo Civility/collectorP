@@ -1,0 +1,38 @@
+doctype html
+html(lang='ru-Ru')
+    head
+        include ./content/head.pug
+    body.category-page
+        header.header
+            include ./content/header.pug
+            .breadcrumbs
+                .container-fluid
+                    .row.w-100
+                        include ./pages/category/nav/breadcrumbs.pug
+        main
+            .container
+                .row
+                    aside.col-12.col-lg-3
+                        .categories
+                            include ./content/nav/categoriesMenu.pug
+                        .price
+                            include ./pages/category/aside/price.pug
+                        .type
+                            include ./pages/category/aside/type.pug
+                        .filter
+                            include ./pages/category/aside/filter.pug
+                    section.col-12.col-lg-9
+                        h1.page-title Путешествия
+                            - var badgeName = "Электроника";
+                        include ./pages/category/badge.pug
+                            - var badgeName = "Одежда";
+                        include ./pages/category/badge.pug                        
+                        .popular
+                            .card-deck
+                                include ./content/product/forProduct.pug
+                                include ./content/product/forProduct.pug
+        footer
+            .footer
+                .container-fluid.p-0
+                    include ./content/footer.pug
+    include ./content/scripts.pug

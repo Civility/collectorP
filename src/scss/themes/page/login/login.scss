@@ -1,0 +1,29 @@
+.login {
+    @extend .h-100;
+
+    .send, .reg {
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .w-100;
+    }
+    main {
+        @extend .justify-content-center;
+    }
+    .form {
+        @extend .pt-5;
+        width: 500px;
+        padding: 0 3%;
+        @extend .bg-white;
+        @extend .shadow;
+        @extend .m-auto;
+    }
+    .form-control {
+        border: none;
+        border-bottom: 1px solid $black;
+        border-radius: 0;
+        @include hover-focus {
+            @extend .shadow-none;
+            outline: 0;
+        }
+    }
+}
