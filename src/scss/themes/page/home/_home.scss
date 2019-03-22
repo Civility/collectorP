@@ -1,8 +1,8 @@
 .home-page {
-    @import './banners.scss';
-    @import './aside.scss';
-    @import './compilation.scss';
-    @import './contact_us.scss';
+    @import './banners';
+    @import './aside';
+    @import './compilation';
+    @import './contact_us';
     .col-flex {
         @extend .col-12;
         @extend .col-sm-6;

@@ -38,7 +38,7 @@
         }
     }
 }
-.type, .price, .filter {
+.type, .rate, .filter {
     .title-card {
         @extend .h5;
         @extend .text-uppercase;
@@ -46,5 +46,14 @@
     }
     .title-card{
         @extend .h5;
+    }
+}
+.rate {
+    .form-group {
+        @extend .align-items-end;
+    }
+    label {
+        @extend .font-weight-bold;
+        @extend .pb-0;
     }
 }

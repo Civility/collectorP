@@ -1,0 +1,37 @@
+.check-one{
+    main {
+        @extend .bg-white;
+    }
+    .step {
+        @extend .bg-light;
+    }
+    .circle {
+        width: 2rem;
+        height: 2rem;
+        border-width: 2px !important;
+        @extend .border-secondary;        
+        @extend .bg-white;
+        @extend .font-weight-bold;
+        &:first-child {
+            @extend .border-primary;
+        }
+        @extend .d-flex;
+        @extend .justify-content-center;
+    }
+    .dash {
+        @extend .w-25;
+    }
+    .step-desc {
+        @extend .font-weight-normal;
+        // @extend .text-monospace;
+        @extend .text-lowercase;
+        @extend %letter;
+    }
+    .send {
+        width: 15rem;
+    }
+    .title-left {
+        @extend .text-lowercase;
+        @extend %letter;
+    }
+}

@@ -1,10 +1,12 @@
-@import './popular.scss'; 
-@import './previous.scss'; 
+@import './popular'; 
+@import './previous'; 
 //main
-@import './home/home.scss'; 
+@import './home/home'; 
 //login
-@import './login/login.scss';
+@import './login/login';
+//check_in_one
+@import './check_in_one/check_in_one';
 //category
-@import './category/category.scss'; 
+@import './category/category'; 
 // product
-@import './product/product.scss';
+@import './product/product';

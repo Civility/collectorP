@@ -7,7 +7,7 @@ main {
     @extend .flex-column;
     @extend .flex-grow-1;
     @extend .bg-light;
-    @extend .my-3;
+    @extend .py-5;
     .line {
         @extend .m-5;
         @extend .shadow-sm;
@@ -37,7 +37,7 @@ section, aside, article {
     background-size: cover;
     height: 12rem;
 }
-.send, .reg, .searce {
+.send, .reg {
     @extend .text-center;
     @extend .btn-lg;
     @extend .font-weight-bold;
@@ -46,8 +46,11 @@ section, aside, article {
     @extend .my-3;
     @extend .py-3;
 }
-.send, .searce {
+.send, .search {
     @extend .btn-warning;
+    & > * {
+        border-radius: 0;
+    }
 }
 .reg {
     @extend .btn-link;
@@ -107,19 +110,6 @@ section, aside, article {
     height: 3rem;
     @extend .mx-1;
 }
-.btn-sale {
-    border-radius: 0;
-    @extend .btn-primary;
-    @extend .px-4;
-    @extend .py-2;
-    @extend .text-uppercase;
-    @extend .font-weight-bold;
-    i {
-        &:before {
-            @extend .mr-1;
-        }
-    }
-}
 .previous-flex {
     @extend .d-flex;
     @extend .justify-content-lg-between;
@@ -128,4 +118,11 @@ section, aside, article {
     .card-body {
         @extend .text-center;
     }
+}
+.send {
+    border-radius: 0;
+    width: 15rem;
+}
+.form {
+    @extend .shadow;
 }

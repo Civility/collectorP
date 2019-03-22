@@ -55,3 +55,17 @@
         // }
     }
 }
+.btn-sale {
+    border-radius: 0;
+    @extend .btn-primary;
+    @extend .px-4;
+    @extend .py-2;
+    @extend .mb-3;
+    @extend .text-uppercase;
+    @extend .font-weight-bold;
+    i {
+        &:before {
+            @extend .mr-1;
+        }
+    }
+}

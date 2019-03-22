@@ -1,0 +1,72 @@
+doctype html
+html(lang='ru-Ru')
+	head
+		include ./content/head.pug
+	body.check-one
+		main
+			.container
+				section
+					h3.title Регистрация
+						.row.form
+							form.info.col-8
+								h3.title-left Персональная информация
+								.row
+									.col-12
+										.form-group
+											label.text-muted.col-form-label-sm(for="Name") Ваше Имя
+											input#Name.form-control(type="text" placeholder="Введите Имя" value="Сюткин")
+											.valid-tooltip Введите Имя
+									.col-12
+										.form-group
+											label.text-muted.col-form-label-sm(for="Name") Ваше Фамилия
+											input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей")
+											.valid-tooltip Введите Фамилия
+									.col-12
+										.form-group
+											label.text-muted.col-form-label-sm(for="Name") Отчество
+											input#Name.form-control(type="text" placeholder="Введите Имя" value="Фиалкин")
+											.valid-tooltip Введите Отчество																				
+									.col-12
+										.form-group
+											label.text-muted.col-form-label-sm(for="password") Пароль
+											input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
+											.valid-tooltip Введите Пароль																		
+							aside.col-4.step
+								.d-flex
+									.rounded-circle.border.border-light.circle 1
+									hr.dash
+									.rounded-circle.border.border-light.circle 2
+									hr.dash
+									.rounded-circle.border.border-light.circle &#10003;
+								.step-info
+									i.fa.fa-user-circle.fa-5x
+								.step-desc
+									p 
+										|Заполните личные данные.
+										br
+										| Информация используется в соответствии с политикой конфиденнциальности
+								.row.justify-content-center
+									a(href="")
+										button.send.btn(type="submit")
+											| Шаг 2
+				//- form.form
+				//- 	.row
+				//- 		.col-12
+				//- 			.form-group
+				//- 				label.text-muted.col-form-label-sm(for="Name") Ваше Имя
+				//- 				input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей Сюткин")
+				//- 				.valid-tooltip Введите Имя
+				//- 		.col-12
+				//- 			.form-group
+				//- 				label.text-muted.col-form-label-sm(for="password") Пароль
+				//- 				input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
+				//- 				.valid-tooltip Введите Пароль
+				//- 	.row
+				//- 		.col-12
+				//- 			button.send.btn(type="submit")
+				//- 				| Вход
+				//- 		.col-12
+				//- 			a(href="#", title="title")
+				//- 				button.reg.btn(type="button")
+				//- 					| Регистрация
+	include ./content/scripts.pug
