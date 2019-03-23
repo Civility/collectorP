@@ -29,7 +29,9 @@
         @extend .pl-4;
     }
     .searce {
-        @extend .mb-3;
+        @extend .my-3;
+        @extend .mx-auto;
+        @extend .btn-primary;
     }
     .custom-control-label {   
         &[for="Check2"] {

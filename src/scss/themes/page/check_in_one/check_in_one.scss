@@ -2,9 +2,6 @@
     main {
         @extend .bg-white;
     }
-    .step {
-        @extend .bg-light;
-    }
     .circle {
         width: 2rem;
         height: 2rem;
@@ -12,6 +9,7 @@
         @extend .border-secondary;        
         @extend .bg-white;
         @extend .font-weight-bold;
+        @extend .h5;
         &:first-child {
             @extend .border-primary;
         }
@@ -21,17 +19,32 @@
     .dash {
         @extend .w-25;
     }
-    .step-desc {
-        @extend .font-weight-normal;
-        // @extend .text-monospace;
+    .title-left {
         @extend .text-lowercase;
         @extend %letter;
+    }
+    .info {
+        @extend .mb-5;
+    }
+    .form {
+        @extend .my-5;
     }
     .send {
         width: 15rem;
     }
-    .title-left {
+    .step {
+        @extend .bg-light;
+        @extend .d-flex;
+        @extend .flex-column;
+    } 
+    .step-dash, .step-info, .step-desc{
+        @extend .m-5;
+        @extend .text-center;
+    }
+    .step-desc {
+        @extend .font-weight-normal;
         @extend .text-lowercase;
-        @extend %letter;
+        @extend %letter;        
+        @extend .h5;
     }
 }

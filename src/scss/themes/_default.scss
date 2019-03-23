@@ -48,15 +48,12 @@ section, aside, article {
 }
 .send, .search {
     @extend .btn-warning;
-    & > * {
-        border-radius: 0;
-    }
 }
 .reg {
     @extend .btn-link;
 }
 .page-title {
-    @extend .h2;
+    @extend .h4;
     @extend %letter;
     @extend .py-4;
     @extend .text-uppercase;
@@ -119,6 +116,10 @@ section, aside, article {
         @extend .text-center;
     }
 }
+.send-btn {
+    @extend .m-auto;
+    @extend .justify-content-center;
+}
 .send {
     border-radius: 0;
     width: 15rem;
@@ -126,3 +127,13 @@ section, aside, article {
 .form {
     @extend .shadow;
 }
+    .form-control {
+        border: none;
+        border-bottom: 1px solid $black;
+        border-radius: 0;
+        @extend  .font-weight-bold;
+        @include hover-focus {
+            @extend .shadow-none;
+            outline: 0;
+        }
+    }

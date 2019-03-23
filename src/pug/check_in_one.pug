@@ -6,33 +6,67 @@ html(lang='ru-Ru')
 		main
 			.container
 				section
-					h3.title Регистрация
+					h3
+						.title Регистрация
 						.row.form
-							form.info.col-8
-								h3.title-left Персональная информация
-								.row
-									.col-12
+							form.info.col-12.col-lg-7
+								.row.justify-content-center
+									.col-10
+										h3.title-left Персональная информация
+									.col-10
 										.form-group
 											label.text-muted.col-form-label-sm(for="Name") Ваше Имя
 											input#Name.form-control(type="text" placeholder="Введите Имя" value="Сюткин")
 											.valid-tooltip Введите Имя
-									.col-12
+									.col-10
 										.form-group
-											label.text-muted.col-form-label-sm(for="Name") Ваше Фамилия
-											input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей")
-											.valid-tooltip Введите Фамилия
-									.col-12
+											label.text-muted.col-form-label-sm(for="Surname") Ваше Фамилия
+											input#Surname.form-control(type="text" placeholder="Введите Имя" value="Сергей")
+											.valid-tooltip Введите Фамилию
+									.col-10
 										.form-group
-											label.text-muted.col-form-label-sm(for="Name") Отчество
-											input#Name.form-control(type="text" placeholder="Введите Имя" value="Фиалкин")
-											.valid-tooltip Введите Отчество																				
-									.col-12
+											label.text-muted.col-form-label-sm(for="Patronymic") Отчество
+											input#Patronymic.form-control(type="text" placeholder="Введите Имя" value="Фиалкин")
+											.valid-tooltip Введите Отчество
+									.col-10
+										.form-group
+											label.text-muted.col-form-label-sm(for="Email") E-mail
+											input#Email.form-control(type="email" placeholder="Введите E-mail" value="email@email.ru")
+											.valid-tooltip Введите E-mail
+									.col-10
+										.form-group
+											label.text-muted.col-form-label-sm(for="Phone") Номер телефона
+											input#Phone.form-control(type="number" placeholder="+7 (900) 999-99-99" value="+7 (900) 999-99-99")
+											.valid-tooltip Введите номер телефона
+									.col-10
+										.form-group
+											label.text-muted.col-form-label-sm(for="Telegram") Username Telegram
+											input#Telegram.form-control(type="text" placeholder="Введите Username" value="@email")
+											.valid-tooltip Введите Username Telegram
+									.col-10
+										.form-group
+											label.text-muted.col-form-label-sm(for="Subdivision") Подразделение
+											select#Subdivision.form-control.custom-select.custom-select-sm
+												option(value="Набор 1" selected)
+													p Набор 1
+												option(value="Набор 2")
+													p Набор 2
+												option(value="Набор 3")
+													p Набор 3
+												option(value="Набор 4")
+													p Набор 4
+									.col-10
 										.form-group
 											label.text-muted.col-form-label-sm(for="password") Пароль
 											input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
-											.valid-tooltip Введите Пароль																		
-							aside.col-4.step
-								.d-flex
+											.valid-tooltip Введите Пароль
+									.col-10
+										.form-group
+											label.text-muted.col-form-label-sm(for="password") Повтарить Пароль
+											input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
+											.valid-tooltip Повтарить Пароль
+							aside.step.col-12.col-lg-5
+								.d-flex.step-dash
 									.rounded-circle.border.border-light.circle 1
 									hr.dash
 									.rounded-circle.border.border-light.circle 2
@@ -45,28 +79,8 @@ html(lang='ru-Ru')
 										|Заполните личные данные.
 										br
 										| Информация используется в соответствии с политикой конфиденнциальности
-								.row.justify-content-center
+								.row.send-btn
 									a(href="")
 										button.send.btn(type="submit")
 											| Шаг 2
-				//- form.form
-				//- 	.row
-				//- 		.col-12
-				//- 			.form-group
-				//- 				label.text-muted.col-form-label-sm(for="Name") Ваше Имя
-				//- 				input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей Сюткин")
-				//- 				.valid-tooltip Введите Имя
-				//- 		.col-12
-				//- 			.form-group
-				//- 				label.text-muted.col-form-label-sm(for="password") Пароль
-				//- 				input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
-				//- 				.valid-tooltip Введите Пароль
-				//- 	.row
-				//- 		.col-12
-				//- 			button.send.btn(type="submit")
-				//- 				| Вход
-				//- 		.col-12
-				//- 			a(href="#", title="title")
-				//- 				button.reg.btn(type="button")
-				//- 					| Регистрация
 	include ./content/scripts.pug
