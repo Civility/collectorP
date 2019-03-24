@@ -1,0 +1,10 @@
+.check-two {
+    @extend .check-one;
+    .circle:nth-child(3) {
+        @extend .border-primary;
+    }
+    .form-control {
+        @extend .border;
+        @extend .border-dark;
+    }
+}

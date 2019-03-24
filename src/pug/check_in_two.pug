@@ -2,31 +2,63 @@ doctype html
 html(lang='ru-Ru')
 	head
 		include ./content/head.pug
-	body.login
+	body.check-two
 		main
 			.container
-				.row
-					.col-12
-						h3.title Вход			
-				form.form
-					.row
-						.col-12
-							.form-group
-								label.text-muted.col-form-label-sm(for="Name") Ваше Имя
-								input#Name.form-control(type="text" placeholder="Введите Имя" value="Сергей Сюткин")
-								.valid-tooltip Введите Имя
-						.col-12
-							.form-group
-								label.text-muted.col-form-label-sm(for="password") Пароль
-								input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
-								.valid-tooltip Введите Пароль
-					.row
-						.col-12
-							.send-btn
-								button.send.btn(type="submit")
-									| Вход
-						.col-12
-							a(href="#", title="title")
-								button.reg.btn(type="button")
-									| Регистрация
+				section
+					h3
+						.title Регистрация
+						.row.form
+							form.info.col-12.col-lg-7
+								.row.justify-content-center
+									.col-10
+										h3.title-left Адрес доставки
+									.col-10
+										.form-group
+											label
+											input#City.form-control(type="text" placeholder="Город" value="")
+											.valid-tooltip Введите Город
+									.col-10
+										.form-group
+											label
+											input#Street_hous.form-control(type="text" placeholder="Улица, дом" value="")
+											.valid-tooltip Введите Улицу, дом
+									.col-10
+										.form-group
+											label
+											input#Room.form-control(type="text" placeholder="Квартира" value="")
+											.valid-tooltip Введите Квартиру
+									.col-10
+										.form-group
+											label
+											input#FIO.form-control(type="text" placeholder="Фамилия, Имя и Отчество" value="")
+											.valid-tooltip Введите Фамилию, Имя и Отчество
+									.col-10
+										.form-group
+											label
+											input#Email.form-control(type="email" placeholder="Электронная почта" value="")
+											.valid-tooltip Введите E-mail											
+									.col-10
+										.form-group
+											label
+											input#Phone.form-control(type="tel" placeholder="Телефон" value="")
+											.valid-tooltip Введите номер телефона
+							aside.step.col-12.col-lg-5
+								.d-flex.step-dash
+									.rounded-circle.border.border-light.circle 1
+									hr.dash
+									.rounded-circle.border.border-light.circle 2
+									hr.dash
+									.rounded-circle.border.border-light.circle &#10003;
+								.step-info
+									i.fa.fa-file-text-o.fa-5x
+								.step-desc
+									p 
+										|Заполните личные данные.
+										br
+										| Информация используется в соответствии с политикой конфиденнциальности
+								.row.send-btn
+									a(href="")
+										button.send.btn(type="submit")
+											| Зарегистрировать
 	include ./content/scripts.pug

@@ -79,15 +79,7 @@
         @extend .justify-content-between;
         @extend .align-items-center;
     }
-    .number-box {
-        @extend .col-6;
-        @extend .d-flex;
-        @extend .align-items-center;
-        @extend .justify-content-around;
-        @extend .py-2;
-        @extend .border;
-        @extend .shadow-sm;
-    }
+
     .specific-desc {
         @extend .small;
         @extend .py-2;
@@ -121,5 +113,4 @@
     .title-list {
         @extend .py-4;
     }
-    
 }

@@ -6,7 +6,7 @@
             bottom: $spacer * 7;
         }
         .navbar {
-            border-radius: 0;
+            @extend .rounded-0;
             @extend .border-0;
             @extend .shadow;
             @extend .mt-0;

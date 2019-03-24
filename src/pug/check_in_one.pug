@@ -36,7 +36,7 @@ html(lang='ru-Ru')
 									.col-10
 										.form-group
 											label.text-muted.col-form-label-sm(for="Phone") Номер телефона
-											input#Phone.form-control(type="number" placeholder="+7 (900) 999-99-99" value="+7 (900) 999-99-99")
+											input#Phone.form-control(type="tel" placeholder="+7 (900) 999-99-99" value="+7 (900) 999-99-99")
 											.valid-tooltip Введите номер телефона
 									.col-10
 										.form-group
@@ -62,9 +62,9 @@ html(lang='ru-Ru')
 											.valid-tooltip Введите Пароль
 									.col-10
 										.form-group
-											label.text-muted.col-form-label-sm(for="password") Повтарить Пароль
-											input#password.form-control(type="password" placeholder="Введите пароль" value="**********")
-											.valid-tooltip Повтарить Пароль
+											label.text-muted.col-form-label-sm(for="passwordRepeat") Повторить Пароль
+											input#passwordRepeat.form-control(type="password" placeholder="Введите пароль" value="**********")
+											.valid-tooltip Повторить Пароль
 							aside.step.col-12.col-lg-5
 								.d-flex.step-dash
 									.rounded-circle.border.border-light.circle 1
@@ -80,7 +80,7 @@ html(lang='ru-Ru')
 										br
 										| Информация используется в соответствии с политикой конфиденнциальности
 								.row.send-btn
-									a(href="")
+									a(href="./check_in_two.html")
 										button.send.btn(type="submit")
 											| Шаг 2
 	include ./content/scripts.pug

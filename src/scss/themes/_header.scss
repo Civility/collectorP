@@ -19,7 +19,7 @@
         input {
             @extend .flex-fill;
         }
-        button {
+        .btn {
             @extend .btn-warning;
             @extend .my-2;
             @extend .my-sm-0;

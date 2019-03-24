@@ -46,8 +46,19 @@ section, aside, article {
     @extend .my-3;
     @extend .py-3;
 }
-.send, .search {
+.send {
     @extend .btn-warning;
+}
+.search {
+        @extend .align-items-stretch;
+    .form-control {
+        @extend .border;
+        @extend .border-dark;
+        @extend .border-right-0;
+    }
+    .btn {
+        @extend .btn-warning;
+    }
 }
 .reg {
     @extend .btn-link;
@@ -121,19 +132,42 @@ section, aside, article {
     @extend .justify-content-center;
 }
 .send {
-    border-radius: 0;
+    @extend .rounded-0;
     width: 15rem;
 }
 .form {
     @extend .shadow;
 }
+
+.form-control {
+    @extend .rounded-0;
+    @extend .font-weight-bold;
+    @extend .py-4;
+    @include hover-focus {
+        @extend .shadow-none;
+        outline: 0;
+    }
+}
+.contact_us, .login, .check-one, .check-two {
     .form-control {
         border: none;
-        border-bottom: 1px solid $black;
-        border-radius: 0;
-        @extend  .font-weight-bold;
-        @include hover-focus {
-            @extend .shadow-none;
-            outline: 0;
-        }
+        @extend .border-bottom;
+        @extend .border-dark;
+        // border-bottom: 1px solid $black;
     }
+}
+
+.number-box {
+    @extend .col-6;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-around;
+    @extend .py-2;
+    @extend .border;
+    @extend .shadow-sm;
+}
+.square {
+    width: 1rem;
+    height: 1rem;
+    @extend.rounded-0;
+}

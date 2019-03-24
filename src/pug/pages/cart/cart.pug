@@ -1,1 +1,26 @@
-.container
+-
+    var path = [
+        {'id': 'cart', 'name': 'Корзина', 'action' : 'show active', 'link' : '#'},
+        {'id': 'checkout','name': 'Оформление заказа', 'action' : "", 'link' : '#'},
+        {'id': 'check','name': 'Чек', 'action' : "", 'link' : '#'}
+    ];
+.row.cart-content
+    .col-10
+        .tab-content#nav-tabContent
+            each val, index in path
+                .tab-pane.fade(
+                    class=val.action
+                    id=val.id
+                    role="tabpanel"
+                    aria-labelledby="nav-" + val.id + "-tab"
+                    )
+                    if val.id === 'cart'
+                        include form.pug
+                    else if val.id === 'checkout'
+                        .checkout-page
+                            include ../checkout/form.pug
+                    else if val.id === 'check'
+                        .check-page
+                            include ../check/form.pug
+                    else
+                        |

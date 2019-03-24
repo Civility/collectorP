@@ -19,7 +19,7 @@
     .form-control {
         border: none;
         border-bottom: 1px solid $black;
-        border-radius: 0;
+        @extend .rounded-0;
         @include hover-focus {
             @extend .shadow-none;
             outline: 0;

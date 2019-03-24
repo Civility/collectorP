@@ -1,0 +1,22 @@
+-
+    var path = [
+        {'id': 'cart', 'name': 'Корзина', 'action' : 'active', 'link' : '#'},
+        {'id': 'checkout','name': 'Оформление заказа', 'action' : "", 'link' : '#'},
+        {'id': 'check','name': 'Чек', 'action' : "", 'link' : '#'}
+    ];
+.row.cart-nav
+    nav.col-8
+        #nav-tab.nav.nav-tabs.justify-content-around(role="tablist")
+            each val, index in path
+                a(
+                    id="nav-"+val.id+"-tab",
+                    class=val.action,
+                    href="#"+val.id,
+                    title=val.name,
+                    aria-controls="nav"+val.id,
+                    data-toggle="tab",
+                    role="tab",
+                    aria-selected=""
+                ).nav-item
+                    button(type="button").btn.btn-lg.btn-link
+                        =index+1 +". "+val.name

@@ -1,0 +1,46 @@
+.table-responsive-lg
+    table.table
+        caption
+            .price 
+                h5 Итого
+                span 60 
+                    i.fa.fa-btc.mr-3(aria-hidden="true")
+        thead
+            tr
+                th(scope="col")
+                th(scope="col")
+                th(scope="col") Количество
+                th(scope="col") Цвет
+                th(scope="col") Итого
+                th(scope="col")
+        tbody
+            - for (var x = 0; x < 2; x++)
+                tr.cart-form
+                    td.img
+                        a(href="./product.html", title="title")
+                            img(src="./img/sale/jbl.png", alt="jbl" title="jbl")
+                    td.name
+                        h3 ПОРТАТИВНАЯ АКУСТИКА JBL GO
+                    td.number
+                        .number-box
+                            a.h6(href="") 
+                                strong &minus;
+                            h6 2
+                            a.h6(href="") 
+                                strong &plus;                                      
+                    td.color
+                        .color-text Черные
+                            .square
+                    td.cost
+                        span 30 
+                            i.fa.fa-btc.mr-3(aria-hidden="true")
+                    td.del
+                        a(href="#", title="title") 
+                            span(aria-hidden="true") &times;
+.cart-buttons
+    a(href="#")
+        button.btn.btn-outline-dark.btn-lg.rounded-0(type="button")
+            | Продолжить покупки
+    a(href="#")
+        button.btn.btn-primary.btn-lg.rounded-0(type="button")
+            | Оформить заказ

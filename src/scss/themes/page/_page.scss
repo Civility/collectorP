@@ -1,12 +1,22 @@
-@import './popular'; 
-@import './previous'; 
+@import './popular';
+@import './previous';
 //main
-@import './home/home'; 
+@import './home/home';
 //login
 @import './login/login';
-//check_in_one
+//check_in
 @import './check_in_one/check_in_one';
+@import './check_in_two/check_in_two';
 //category
 @import './category/category'; 
 // product
 @import './product/product';
+
+//cart
+@import './cart/cart';
+//checkout
+@import './checkout/checkout';
+//check
+@import './check/check';
+
+

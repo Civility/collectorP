@@ -41,22 +41,10 @@
     }
     .btn {
         visibility: hidden;
-        // @extend .py-2;
-        // @extend .px-3;
-        // border-radius: 0;
-        // @extend .btn-warning;
-        // @extend .text-uppercase;
-        // font-size: $font-size-base - 0.2;
-        // @extend .font-weight-bold;
-        // i {
-        //     &:before {
-        //         @extend .mr-1;
-        //     }
-        // }
     }
 }
 .btn-sale {
-    border-radius: 0;
+    @extend .rounded-0;
     @extend .btn-primary;
     @extend .px-4;
     @extend .py-2;

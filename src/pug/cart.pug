@@ -1,0 +1,20 @@
+doctype html
+html(lang='ru-Ru')
+    head
+        include ./content/head.pug
+    body.cart-page
+        header.header
+            include ./content/header.pug
+            .breadcrumbs
+                .container-fluid
+                    .row.w-100
+                        include ./pages/cart/nav/breadcrumbs.pug
+        main
+            .container
+                include ./pages/cart/nav/nav.pug
+                include ./pages/cart/cart.pug
+        footer
+            .footer
+                .container-fluid.p-0
+                    include ./content/footer.pug
+    include ./content/scripts.pug

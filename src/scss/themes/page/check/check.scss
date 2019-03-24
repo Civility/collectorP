@@ -1,0 +1,30 @@
+.check-page {
+    @extend .cart-page;
+    .check-buttons {
+        @extend .text-right;
+        button {
+            @extend .btn-outline-primary;
+            @extend .btn-lg;
+            @extend .rounded-0;
+            @extend .text-dark;
+        }
+    }
+    .price {
+        @extend .h4;
+        @extend .font-weight-bold;
+        @extend .mb-4;
+        h5 {
+            @extend .pt-3;
+        }
+    }
+    .price {
+        @extend .my-2;
+    }
+    .cost {
+        @extend .font-weight-bold;
+        @extend .text-uppercase;
+    }
+    .desc * {
+        @extend .text-left;
+    }
+}

@@ -1,0 +1,112 @@
+.cart-page {
+    .cart-buttons {
+        @extend .col-6;
+        @extend .ml-auto;
+        @extend .text-right;
+        @extend .mt-5;
+        button {
+            @extend .px-5;
+            @extend .py-4;
+            @extend .text-uppercase;
+            @extend .h6;
+            @extend .mx-2;
+        }
+    }
+    thead {
+        th {
+            @extend .border-top-0;
+        }
+    }
+    tbody {
+        td {
+            @extend .border-bottom;
+        }
+    }
+    caption {
+        .price {
+            @extend .text-dark;
+            @extend .font-weight-bold;
+            @extend .text-uppercase;
+            @extend .col-2;
+            @extend .h4;
+            @extend .ml-auto;
+            @extend .my-auto;
+            @extend .px-5;
+        }
+    }
+    .cart-content, .cart-nav {
+        @extend .justify-content-center;
+    }
+    .cart-nav {
+        @extend .mb-5;
+        .nav {
+            @extend .pb-2;
+        }
+        .active {
+            .btn {
+                @extend .text-dark;
+            }
+        }
+        .btn {
+            @extend .font-weight-bold;
+            @extend .text-muted;
+        }     
+    }
+    .color {
+        .square {
+            @extend .bg-dark;
+            @extend .border;
+            @extend .border-secondary;
+        }
+    }
+    .table {
+        thead {
+            th {
+                @extend .text-center;
+            }
+        }
+    }
+    .cart-form {
+        @extend .font-weight-bold;
+        td {
+            @extend .align-middle;
+            @extend .text-center;
+        }
+        .img {
+            img {
+                max-width: 8rem;
+            }
+        }
+        .name {
+            h3 {
+                @extend .h5;
+            }
+        }
+        .number {
+            .number-box {
+                max-width: 10rem;
+                @extend .m-auto;
+            }
+        }
+        .color {
+            @extend .mx-auto;
+            .color-text {
+                @extend .text-muted;
+                @extend .d-inline-flex;
+                @extend .align-items-center;
+                @extend .text-monospace;
+                .square {
+                    @extend .mx-1;
+                }
+            }
+        }
+        .del {
+            @extend .text-muted;
+            @extend .display-3;
+            @extend .font-weight-light;
+            span {
+                 @extend .text-muted;
+            }
+        }
+    }
+}

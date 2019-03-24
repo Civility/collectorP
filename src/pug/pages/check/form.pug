@@ -1,0 +1,61 @@
+.page-title
+    | Спасибо. Заказ оформлен
+.card
+    .card-header
+        h5 №345678
+    .card-body
+        .row
+            .col-12.col-lg-6
+                .table-responsive-lg
+                    table.table
+                        thead
+                            tr
+                                th(scope="col") Детали заказа
+                                th(scope="col")
+                                th(scope="col")
+                        tbody
+                            - for (var x = 0; x < 2; x++)
+                                tr.cart-form
+                                    td.img
+                                        a(href="./product.html", title="title")
+                                            img(src="./img/sale/jbl.png", alt="jbl" title="jbl")
+                                    td.desc
+                                        .name 
+                                            | ПОРТАТИВНАЯ АКУСТИКА JBL GO
+                                        .color
+                                            .color-text Черные
+                                                .square
+                                        .price
+                                            span 30 
+                                                i.fa.fa-btc.mr-3(aria-hidden="true")
+                                    td.cost
+                                        span 2X
+            .col-12.col-lg-5.ml-auto
+                .price 
+                    h5 Итого
+                    span 60 
+                        i.fa.fa-btc.mr-3(aria-hidden="true")
+                .method-get.text-muted
+                    h4.text-dark Способ получения
+                    dl.row
+                        dt.col-sm-4 Адрес доставки:
+                        dd.col-sm-8
+                            p Пункт выдачи посылок PickPoint
+                            p Пушкин, Полковая ул.,д.1
+                            p Можно забрать с 23 по 24 января, 149р
+                            p Ежедневно 10:00 - 22:00
+                        dt.col-sm-3 Получатель:
+                        dd.col-sm-9 
+                            p Сергей Сюткин 
+                        dt.col-sm-4 Срок доставки:
+                        dd.col-sm-8 
+                            p Заказ доставят с 1 по 5 февраля 
+                        dt.col-sm-5 Стоимость доставки:
+                        dd.col-sm-7 
+                            p 2 
+                                i.fa.fa-btc.mr-3(aria-hidden="true")
+                        .col.check-buttons
+                            a(href="#")
+                                button.btn(type="button")
+                                    | Оформить заказ
+                        
