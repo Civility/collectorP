@@ -1,38 +1,35 @@
-// для main
-.stock {
-    aside {
-        bottom: 0rem;
-        @include media-breakpoint-up(lg) {
-            bottom: $spacer * 7;
-        }
-        .navbar {
-            @extend .rounded-0;
-            @extend .border-0;
-            @extend .shadow;
-            @extend .mt-0;
-        }
-        .categoriesMenu { 
-            @extend .navbar-dark;
-            @extend .bg-dark;
-            .navbar-title {
-                background-color: $gray-900;
-                @extend .text-light;
-                @extend .justify-content-lg-center;
-            }
-        }
-        .subscribe {
-            @extend .mt-5;
-            @extend .pt-3;
-            .card {
-                @extend .pt-5;
-                @extend .bg-secondary;
-                @extend .shadow;
-                @extend .px-4;
-                .card-title {
-                    @extend .font-weight-bold;
-                    @extend %letter;
-                }
-            }
-        }
+aside {
+    bottom: 0rem;
+    @include media-breakpoint-up(lg) {
+        bottom: $spacer * 7;
+    }
+}
+.cat-menu {
+    .card {
+        @extend .shadow;
+        @extend .mb-5;
+        @extend .border-0;
+    }
+    .card-header {     
+        @extend .bg-dark;
+        @extend .justify-content-lg-center;
+        @extend .text-white;
+        @extend .font-weight-bold;
+        @extend .text-uppercase;
+        @extend .w-100;
+        @extend .m-0;
+        @extend .p-4;
+    }
+}
+.subscribe {
+    .card {
+        @extend .border-0;
+        @extend .bg-secondary;
+        @extend .shadow;
+    }
+    .card-title {
+        @extend .font-weight-bold;
+        @extend %letter;
+        @extend .mt-5;
     }
 }

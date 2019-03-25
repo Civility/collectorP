@@ -1,13 +1,36 @@
 .profile-page {
     aside {
         a.list-group-item-action {
-            background-color: transparent;
+            background-color: transparent !important;
             @extend .py-4;
         }
+        .navbar {
+            background-color: transparent !important;
+        }
     }
-    .card-img {
-        width: 600px;
-        height: 600px;
-        @extend .bg-dark;
+    .navbar-collapse {
+        @extend .w-100;
+    }
+    .personally {
+        .btn-link {
+            color: $cyan;
+            @include hover-focus {
+                color: lighten($cyan, 10%);
+            }
+        }
+
+        form {
+            dl, dd, .form-group{
+                @extend .mb-0;
+            }
+            input {
+                @extend .border-0;
+                @extend .px-0;
+                @extend .py-0;
+            }            
+            .btn {
+                font-size: 1em;
+            }
+        }
     }
 }

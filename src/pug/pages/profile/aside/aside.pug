@@ -6,8 +6,12 @@
         {'name': 'Администратор', 'icon' : 'calculator', 'link' : '#'},
         {'name': 'Выход', 'icon' : 'sign-in', 'link' : '#'}
     ];
-nav.nav.flex-column.list-group.list-group-flush
-    each val, index in arr
-        a(href=val.link).nav-link.list-group-item.list-group-item-action
-            i.fa(class='fa-' + val.icon)
-            =val.name
+nav.nav.list-group.list-group-flush.navbar.navbar-expand-lg.navbar-light
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarProf" aria-controls="navbarProf" aria-expanded="false")
+        span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarProf
+        .navbar-nav.flex-column
+            each val, index in arr
+                a(href=val.link).nav-link.nav-item.list-group-item.list-group-item-action
+                    i.fa(class='fa-' + val.icon)
+                    =val.name

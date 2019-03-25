@@ -1,19 +1,18 @@
 -
-    var rout = [
+    var arr = [
         {'name': 'Путешествия', 'link' : "./category.html", 'icon' : 'tree'},
         {'name': 'Дом', 'link' : "./category.html", 'icon' : 'home'},
         {'name': 'Отдых', 'link' : "./category.html", 'icon' : 'coffee'},
         {'name': 'Офис', 'link' : "./category.html", 'icon' : 'paperclip'},
         {'name': 'Красота', 'link' : "./category.html", 'icon' : 'envira'}
     ];
-nav.navbar.navbar-expand-lg.card.navbar-dark
-    h2.navbar-title Категории
-        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation")
+nav.nav.list-group.list-group-flush.navbar.navbar-expand-lg.navbar-dark.card.w-100.p-0
+    .card-header.navbar-brand Категории 
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu" aria-expanded="false")
             span.navbar-toggler-icon
-    #categoriesMenu.collapse.navbar-collapse
-        .list-group.list-group-flush
-            each val, index in rout
-                a(href=val.link, title=val.name).list-group-item.list-group-item-action
-                    button.btn.btn-link.text-muted(type="button").d-inline-flex.align-items-center
-                        i.fa(aria-hidden="true" class='fa-' + val.icon)
-                        =val.name
+    .collapse.navbar-collapse.w-100#navMenu
+        .navbar-nav
+            each val, index in arr
+                a(href=val.link).list-group-item.list-group-item-action.list-group-flush.nav-link.nav-item.p-4.text-muted
+                    i.fa(class='fa-' + val.icon)
+                    =val.name

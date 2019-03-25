@@ -1,1 +1,27 @@
-img(src="./", alt="").card-img.img-fliud
+.list-unstyled.personally
+    li
+        img(src="/img/profile/face.jpg", alt="").card-img.img-fliud
+    li
+        dl.name
+            dt.h4.mb-0 Сергей Сюткин
+            dd.small.text-success Подтвержден
+    li
+        | Контакты
+        hr
+    li
+        form
+            .form-group
+                dl.small.text-muted(for="Email") Email
+                dd
+                    input#Email(type="email" placeholder="Введите E-mail" value="email@email.ru").form-control
+            .form-group
+                dl.small.d-flex.align-items-center
+                    .text-muted(for="Phone") Номер телефона
+                    button(type="button").btn.btn-link Изменить
+                dd
+                    input#Phone(type="text" placeholder="Введите Телефон" value="+7 (921) 640 - 40 - 45").form-control
+            .form-group
+                dl.small.d-flex.align-items-center
+                    .text-muted(for="Telegram") Username Telegram
+                dd
+                    input#Telegram(type="text" placeholder="Введите Телефон" value="@gagalinks").form-control                      

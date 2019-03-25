@@ -10,16 +10,15 @@ html(lang='ru-Ru')
 					include ./content/nav/nav.pug
 		main
 			.container
-				.stock
-					.row
-						aside.col-lg-3.col-12
-							.categoriesMenu
-								include ./content/nav/categoriesMenu.pug
-							.subscribe
-								include ./pages/home/aside/subscribe.pug
-						section.col-lg-9.col-12
-							.banners
-								include ./pages/home/banner.pug
+				.row
+					aside.col-lg-3.col-12
+						.cat-menu
+							include ./content/nav/categoriesMenu.pug
+						.subscribe
+							include ./pages/home/aside/subscribe.pug
+					section.col-lg-9.col-12
+						.banners
+							include ./pages/home/banner.pug
 				section
 					.popular
 						.row

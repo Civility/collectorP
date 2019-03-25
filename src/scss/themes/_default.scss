@@ -26,8 +26,9 @@ section, aside, article {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 50vh;
-    height: 30.5rem;
+    height: 26rem;
+    @extend .border;
+    @extend .border-dark;
 }
 .banner-mini {
     background-image: url('../img/banner/banner_mini.jpg');
