@@ -1,0 +1,12 @@
+-
+    var met = [
+        {'id': 'courier', 'name': 'Доставка курьером', 'action' : 'active', 'desc' : 'Заказ приедет по выбранному адресу'},
+        {'id': 'pickup',  'name': 'Самовывоз',         'action' : '',            'desc' : 'Выберите адрес Постмата'},
+        {'id': 'branch',  'name': 'Филиал',            'action' : '',            'desc' : 'Доставка в офис компании'}
+    ];
+.tab-pane(
+        class=val.action
+        id='nav-'+val.id
+        aria-labelledby=val.id+'-tab'
+        role="tabpanel"
+)

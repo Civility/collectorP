@@ -1,105 +1,60 @@
-//- .page-title
-//-     | Спасибо. Заказ оформлен
-//- .card
-//-     .card-header
-//-         h5 №345678
-//-     .card-body
-//-         .row
-//-             .col-12.col-lg-6
-//-                 .table-responsive-lg
-//-                     table.table
-//-                         thead
-//-                             tr
-//-                                 th(scope="col") Детали заказа
-//-                                 th(scope="col")
-//-                                 th(scope="col")
-//-                         tbody
-//-                             - for (var x = 0; x < 2; x++)
-//-                                 tr.cart-form
-//-                                     td.img
-//-                                         a(href="./product.html", title="title")
-//-                                             img(src="./img/sale/jbl.png", alt="jbl" title="jbl")
-//-                                     td.desc
-//-                                         .name 
-//-                                             | ПОРТАТИВНАЯ АКУСТИКА JBL GO
-//-                                         .color
-//-                                             .color-text Черные
-//-                                                 .square
-//-                                         .price
-//-                                             span 30 
-//-                                                 i.fa.fa-btc.mr-3(aria-hidden="true")
-//-                                     td.cost
-//-                                         span 2X
-//-             .col-12.col-lg-5.ml-auto
-//-                 .price 
-//-                     h5 Итого
-//-                     span 60 
-//-                         i.fa.fa-btc.mr-3(aria-hidden="true")
-//-                 .method-get.text-muted
-//-                     h4.text-dark Способ получения
-//-                     dl.row
-//-                         dt.col-sm-4 Адрес доставки:
-//-                         dd.col-sm-8
-//-                             p Пункт выдачи посылок PickPoint
-//-                             p Пушкин, Полковая ул.,д.1
-//-                             p Можно забрать с 23 по 24 января, 149р
-//-                             p Ежедневно 10:00 - 22:00
-//-                         dt.col-sm-3 Получатель:
-//-                         dd.col-sm-9 
-//-                             p Сергей Сюткин 
-//-                         dt.col-sm-4 Срок доставки:
-//-                         dd.col-sm-8 
-//-                             p Заказ доставят с 1 по 5 февраля 
-//-                         dt.col-sm-5 Стоимость доставки:
-//-                         dd.col-sm-7 
-//-                             p 2 
-//-                                 i.fa.fa-btc.mr-3(aria-hidden="true")
-//-                         .col.check-buttons
-//-                             a(href="#")
-//-                                 button.btn(type="button")
-//-                                     | Оформить заказ
 -
     var met = [
         {'id': 'courier', 'name': 'Доставка курьером', 'action' : 'show active', 'desc' : 'Заказ приедет по выбранному адресу'},
-        {'id': 'pickup','name': 'Самовывоз', 'action' : '', 'desc' : 'Выберите адрес Постмата'},
-        {'id': 'branch','name': 'Филиал', 'action' : '', 'desc' : 'Доставка в офис компании'}
+        {'id': 'pickup',  'name': 'Самовывоз',         'action' : '',            'desc' : 'Выберите адрес Постмата'},
+        {'id': 'branch',  'name': 'Филиал',            'action' : '',            'desc' : 'Доставка в офис компании'}
     ];
 .row
-    .col-12.col-lg-8
+    .col-12.col-lg-7.mr-auto
         form.row.no-gutters
             .form-group.col-8
-                label(for="Region") Регион получения
+                label.control-label(for="Region") Регион получения
                 input(type="text" placeholder="").form-control#Region
-            .form-group
+            .form-group.cards.col-12
+                label.control-label(for="") Способ получения
                 nav.card-deck
                     each val, index in met
                         .card
-                            .nav.card-body#nav-tab(role="tablist")
-                                a(
-                                    href="#nav-"+val.id
-                                    title="title" 
+                            .nav.card-body.nav-tabs#nav-tab(role="tablist")                            
+                                a.nav-item.card-title.stretched-link(
+                                    href='#nav-'+val.id
                                     class=val.action
-                                    id=val.id
+                                    id=val.id+'-tab'
                                     aria-controls="nav-"+val.id
                                     data-toggle="tab"
                                     role="tab"
-                                ).nav-item.card-title.stretched-link
-                                    h5=val.name
+                                )
+                                    label.name=val.name
                                 .card-text
                                     small.text-muted
-                                        =val.desc
+                                        p=val.desc
+                .tab-content.form-group.col-8#tabClick
+                    each val, index in met
+                        .tab-pane.fade(
+                            class=val.action
+                            id='nav-'+val.id
+                            aria-labelledby=val.id+'-tab'
+                            role="tabpanel"
+                        )
+                            if val.id === 'courier' 
+                                =''
+                            else if val.id === 'pickup' 
+                                =''
+                            else if val.id === 'branch'
+                                =''
             .form-group.col-8
-                label(for="RData") Данные получателя
-                input(type="text" placeholder="").form-control#RData
+                label.control-label(for="RData") Данные получателя
+                input(type="text" placeholder="Улица, дом").form-control#RData
             .form-group.col-8
-                input(type="text" placeholder="").form-control
+                input(type="text" placeholder="Квартира").form-control
             .form-group.col-8
-                input(type="text" placeholder="").form-control
+                input(type="text" placeholder="Фамилия, имя и отчество").form-control
             .form-group.col-8
-                input(type="text" placeholder="").form-control
+                input(type="text" placeholder="Электронная почта").form-control
             .form-group.col-8
-                input(type="text" placeholder="").form-control
+                input(type="text" placeholder="Телефон").form-control
             .form-group.col-8
-                label(for="Extra") Дополнительно
-                textarea#Extra.form-control(type="text" name="message" rows="5" required="required" placeholder="")            
-    .col-12.col-lg-4
+                label.control-label(for="Extra") Дополнительно
+                textarea#Extra.form-control(type="text" name="message" rows="5" required="required" placeholder="Ваш комментарий")            
+    .col-12.col-lg-4.cart-form
+        include ./cart-form.pug

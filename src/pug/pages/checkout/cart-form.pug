@@ -1,0 +1,45 @@
+.card
+    .card-header 
+        h5.my-2 Состав заказа
+    .card-body
+        table.table.table-borderless
+            tbody
+                - for (var x = 0; x < 2; x++)
+                    tr
+                        td.img
+                            a(href="./product.html", title="title")
+                                img(src="./img/sale/jbl.png", alt="jbl" title="jbl")
+                        td.desc
+                            .name 
+                                | Портативная акустика JBL GO
+                            .price
+                                span 30 
+                                    i.fa.fa-btc.mr-3(aria-hidden="true")
+                            .cost
+                                span 1 шт.
+        hr.line
+        dl.row
+            dt.col-sm-8
+                small.text-muted Товары (2)
+            dd.col-sm-4
+                span 30 
+                    i.fa.fa-btc.mr-3
+            dt.col-sm-8
+                small.text-muted Доставка курьером
+            dd.col-sm-4
+                span 2 
+                    i.fa.fa-btc.mr-3
+            dt.col-sm-8
+                small.text-muted Скидка на товары
+            dd.col-sm-4
+                .text-danger -3
+                    i.fa.fa-btc.mr-3
+            dt.col-sm-8
+                lead Итого к оплате
+            dd.col-sm-4
+                strong 29
+                    i.fa.fa-btc.mr-3
+    .card-footer.send-btn
+        a(href="./check_in_two.html")
+            button.btn-primary.send.btn(type="submit")
+                | Оплатить заказ

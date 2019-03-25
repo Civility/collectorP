@@ -15,7 +15,7 @@
             @extend .navbar-dark;
             @extend .bg-dark;
             .navbar-title {
-                background-color: lighten($dark, 6%);
+                background-color: $gray-200;
                 @extend .text-light;
                 @extend .justify-content-lg-center;
             }

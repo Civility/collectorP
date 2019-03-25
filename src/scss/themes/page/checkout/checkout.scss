@@ -1,3 +1,83 @@
 .checkout-page {
     @extend .cart-page;
+    form {
+        input {
+           @extend .font-weight-normal; 
+        }
+        label {
+            @extend .font-weight-bold;
+        }
+        .cards {
+            @extend .my-5;
+            .card {
+                @extend .border-dark;
+                @include hover-focus {
+                    @extend .border-primary;
+                    background-color: lighten($primary, 45%);
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+            .name {
+                @extend .font-weight-bold;
+            }
+            .card-text {
+                @extend .pb-4;
+            }
+        }  
+    }
+    tbody {
+        td {
+            @extend .border-0;
+        }
+    }
+    .cart-form {
+        .card-header {
+            background-color: $gray-200;
+        }
+        .card {
+            @extend .border-secondary;
+            @extend .shadow;
+        }
+        .img {
+            img{
+                @extend .w-100;
+            }
+        }        
+        .card-header {
+            @extend .font-weight-bold;
+        }
+        .desc {
+            @extend .text-left;
+            & > * {
+                font-size: .9em;
+            }
+        }
+        .cost {
+            @extend .text-muted;
+        }
+        .line {
+            @extend .mt-3;
+            @extend .mb-5;
+        }
+        dl {
+            strong {
+                @extend .h4;
+            }
+        }
+        dd {
+            @extend .text-right;
+        }
+        .card-footer {
+            @extend .w-100;
+            @extend .p-0;
+            .send {
+                @extend .w-100;
+                @extend .py-3;
+                @extend .font-weight-bold;
+                @extend .m-0;
+            }
+        }
+    }
 }

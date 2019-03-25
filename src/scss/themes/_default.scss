@@ -10,7 +10,6 @@ main {
     @extend .py-5;
     .line {
         @extend .m-5;
-        @extend .shadow-sm;
     }
 }
 section, aside, article {
