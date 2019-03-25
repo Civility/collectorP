@@ -1,0 +1,13 @@
+.profile-page {
+    aside {
+        a.list-group-item-action {
+            background-color: transparent;
+            @extend .py-4;
+        }
+    }
+    .card-img {
+        width: 600px;
+        height: 600px;
+        @extend .bg-dark;
+    }
+}

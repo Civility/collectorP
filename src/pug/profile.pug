@@ -1,0 +1,24 @@
+doctype html
+html(lang='ru-Ru')
+    head
+        include ./content/head.pug
+    body.profile-page
+        header.header
+            include ./content/header.pug
+            .breadcrumbs
+                .container-fluid
+                    .row.w-100
+                        include ./pages/profile/nav/breadcrumbs.pug
+        main
+            .container
+                .row
+                    aside.col-3
+                        include ./pages/profile/aside/aside.pug
+                    section.col-9
+                        .previous
+                            include ./pages/profile/profile.pug
+        footer
+            .footer
+                .container-fluid.p-0
+                    include ./content/footer.pug
+    include ./content/scripts.pug

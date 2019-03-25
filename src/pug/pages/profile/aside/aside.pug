@@ -1,0 +1,13 @@
+-
+    var arr = [
+        {'name': 'Профиль', 'icon' : 'user-o', 'link' : '#'},
+        {'name': 'Мои заказы', 'icon' : 'shopping-cart', 'link' : '#'},
+        {'name': 'Баланс и переводы', 'icon' : 'university', 'link' : '#'},
+        {'name': 'Администратор', 'icon' : 'calculator', 'link' : '#'},
+        {'name': 'Выход', 'icon' : 'sign-in', 'link' : '#'}
+    ];
+nav.nav.flex-column.list-group.list-group-flush
+    each val, index in arr
+        a(href=val.link).nav-link.list-group-item.list-group-item-action
+            i.fa(class='fa-' + val.icon)
+            =val.name
