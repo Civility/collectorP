@@ -22,10 +22,12 @@ aside {
     }
 }
 .subscribe {
+    @extend .py-1;
     .card {
         @extend .border-0;
         @extend .bg-secondary;
         @extend .shadow;
+        @extend .pt-3;
     }
     .card-title {
         @extend .font-weight-bold;

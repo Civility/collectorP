@@ -1,1 +1,28 @@
-.container
+.card-deck.row
+    .card.card-balance
+        .card-body
+            .card-title.title-left Баланс
+        .card-footer
+            .display-2.font-weight-bold 
+                | 1000 
+                i.fa.fa-btc
+    .card.card-transfer
+        .card-body
+            .card-title.title-left Перевести  
+            form
+                .form-group
+                    input#Telegram.form-control(type="text" placeholder="Username Telegram" value="" required)
+                    .valid-tooltip Ошибка
+                .form-group
+                    input#Sum.form-control(type="number" placeholder="Сумма" value="" required)
+                    .valid-tooltip Ошибка
+                .send-transfer
+                    a(href="./index.html")
+                        button.btn-outline-primary.btn(type="submit")
+                            | Перевести
+.row
+    .col-md-12
+        .title-left История
+        .card.card-history
+            .card-body
+                include ./history.pug

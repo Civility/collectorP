@@ -22,11 +22,12 @@ html(lang='ru-Ru')
 								.valid-tooltip Введите Пароль
 					.row
 						.col-12
-							.send-btn
-								button.send.btn(type="submit")
+							a.send-btn(href="profile.html", title="title")
+								//- button.send.btn(type="submit")
+								button.send.btn(type="button")
 									| Вход
 						.col-12
-							a(href="./check_in_one.html", title="title")
+							a(href="check_in_one.html", title="title")
 								button.reg.btn(type="button")
 									| Регистрация
 	include ./content/scripts.pug

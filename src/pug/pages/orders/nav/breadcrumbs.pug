@@ -1,0 +1,11 @@
+-
+    var rout = [
+        {'name': 'Главная', 'link' : "./index.html"},
+        {'name': 'Мои заказы', 'link' : "./"},
+    ];
+.container
+    nav(aria-label="breadcrumb")
+        ol.breadcrumb
+            each val, index in rout
+                li.breadcrumb-item
+                    a(href=val.link, title=val.name)=val.name

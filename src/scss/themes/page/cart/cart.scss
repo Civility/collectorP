@@ -52,13 +52,6 @@
             @extend .text-muted;
         }     
     }
-    .color {
-        .square {
-            @extend .bg-dark;
-            @extend .border;
-            @extend .border-secondary;
-        }
-    }
     .table {
         thead {
             th {

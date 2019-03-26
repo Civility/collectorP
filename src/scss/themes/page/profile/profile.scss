@@ -1,28 +1,32 @@
 .profile-page {
-    aside {
-        a.list-group-item-action {
-            background-color: transparent !important;
-            @extend .py-4;
-        }
-        .navbar {
-            background-color: transparent !important;
+    .card-profile {
+        @extend .shadow;
+        @extend .mb-5;
+    }
+    .title-left {
+        @extend .text-lowercase;
+        @extend %letter;
+    }
+    .btn-link {
+        color: $cyan;
+        @include hover-focus {
+            color: lighten($cyan, 10%);
         }
     }
-    .navbar-collapse {
-        @extend .w-100;
-    }
-    .personally {
-        .btn-link {
-            color: $cyan;
-            @include hover-focus {
-                color: lighten($cyan, 10%);
-            }
-        }
+    dt, dd, label {
+        @extend .mb-0;
+        @extend .d-flex;
+    }       
 
-        form {
-            dl, dd, .form-group{
-                @extend .mb-0;
+    .personally {
+        @extend .p-4;
+        .name {
+            @extend .my-4;
+            dt {
+                @extend .font-weight-bold;
             }
+        }
+        form {
             input {
                 @extend .border-0;
                 @extend .px-0;
@@ -32,5 +36,73 @@
                 font-size: 1em;
             }
         }
+        dl {
+            @include hover-focus {
+                dt > .btn {
+                    visibility: visible;
+                }
+            }
+            dt > .btn {
+                visibility: hidden; 
+            }
+        }
+    }
+    .address-form {
+        @extend .p-4;
+        .title-left {
+            @extend .mt-0;
+        }        
+        .form-control {
+            @extend .font-weight-normal;
+            @extend %letter;
+        }
+        .btn {
+            font-size: 0.75em;
+        }
+        dd {
+            .btn {
+                visibility: hidden;
+            }   
+        }
+        @include hover-focus {
+            visibility: visible;
+        }
+        dl {
+            @include hover-focus {
+                & > dd .btn {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+.card-password {
+    @extend .px-4;
+    @extend .shadow;
+    .title-left {
+        @extend .h4;
+        @extend .mt-0;
+    }
+    .form-control {
+        @extend .font-weight-normal;
+        @extend %letter;
+    }
+    .send-password {
+        a {
+            @extend .d-flex;
+            @extend .justify-content-end;
+        }
+    }
+    .btn {
+        @extend .text-dark;
+    }
+}
+.profile-menu {
+    a.list-group-item-action {
+        background-color: transparent !important;
+        @extend .py-4;
+    }
+    .navbar {
+        background-color: transparent !important;
     }
 }

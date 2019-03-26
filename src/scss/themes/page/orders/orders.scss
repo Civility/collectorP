@@ -1,0 +1,43 @@
+.orders-page {
+    .balacne-menu {
+        @extend .profile-menu;
+    }
+    .card-header {
+        @extend .font-weight-bold;
+    }
+    .orders-main {
+        .card {
+            @extend .mb-4;
+            @extend .shadow;
+            @extend .border-secondary;
+        }
+        .img, .desc, .orders-price, .cost, .btn-orders {
+            @extend .py-4;
+        }
+        .border-right {
+            @extend .border-dark;
+        }
+        .color {
+            @extend .d-inline-flex;
+            @extend .align-items-center;
+            .square {
+                @extend .ml-3;
+            }
+        }
+        .orders-price {
+            @extend .d-flex;
+            @extend .align-items-baseline;
+            .price {
+                @extend .h5;
+            }
+        }
+        .btn-orders {
+            @extend .d-flex;
+            @extend .align-items-end;
+            @extend .justify-content-end;
+            a {
+                @extend .flex-grow-1;
+            }
+        }
+    }
+}

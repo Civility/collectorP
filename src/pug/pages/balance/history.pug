@@ -1,0 +1,22 @@
+.table-responsive-md
+    table.table.table-borderless
+        thead
+            tr
+                th(scope="col") Кому
+                th(scope="col") Время
+                th(scope="col") Дата
+                th(scope="col") Сумма
+        tbody
+        - for (var x = 0; x < 5; x++)
+            tr
+                td @Username
+                td 23:40
+                td 09.09.2019
+                td 
+                    | 15
+                    i.fa.fa-btc
+.row.justify-content-center
+    .send-history
+        a(href="./index.html")
+            button.btn-outline-primary.btn(type="button")
+                | Показать еще

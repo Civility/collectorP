@@ -1,0 +1,44 @@
+.card
+    .card-header
+        .row
+            .col-4 №
+            .col-4 Время
+            .col-2 Дата
+            .col-2 Статус
+- for (let x = 0; x < 5; x++)
+    - let t = 59 - x
+        .card
+            .card-header.bg-secondary
+                .row
+                    .col-4
+                        span=x + 345678
+                    .col-4
+                        span='23:' + t
+                    .col-2 
+                        | 09.09.2019
+                    .col-2
+                        | Доставлено
+            .card-body.bg-white        
+                .row
+                    .col-12.col-lg-5.border-right
+                        .row
+                            .col-3.img
+                                img.img-fluid(src="./img/sale/jbl.png", alt="jbl" title="jbl")
+                            .col-7.desc
+                                dl
+                                    dt.name Портативная акустика JBL GO
+                                    dd.color
+                                        .color-text Черные
+                                        .square
+                            .col-2.cost
+                                strong X2
+                    .col-12.col-lg-7
+                        .row.h-100
+                            .col.mr-auto.orders-price
+                                strong Стоимость:&nbsp;
+                                .price
+                                    | 30
+                                    i.fa.fa-btc
+                            .col-4.btn-orders
+                                a(href="/cart.html")
+                                    button(type="button").btn.btn-outline-primary.text-dark.w-100 Детали

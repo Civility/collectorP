@@ -82,8 +82,7 @@ section, aside, article {
     text-align: left;
     @extend .title;
     @extend .p-0;
-    @extend .m-0;
-    @extend .mb-3;
+    @extend .my-0;
 }
 .badge {
     @extend .small;
@@ -170,4 +169,7 @@ section, aside, article {
     width: 1rem;
     height: 1rem;
     @extend.rounded-0;
+    @extend .bg-dark;
+    @extend .border;
+    @extend .border-secondary;    
 }

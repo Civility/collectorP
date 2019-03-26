@@ -1,15 +1,15 @@
 -
     var arr = [
-        {'name': 'Профиль', 'icon' : 'user-o', 'link' : '#'},
-        {'name': 'Мои заказы', 'icon' : 'shopping-cart', 'link' : '#'},
-        {'name': 'Баланс и переводы', 'icon' : 'university', 'link' : '#'},
+        {'name': 'Профиль', 'icon' : 'user-o', 'link' : './profile.html'},
+        {'name': 'Мои заказы', 'icon' : 'shopping-cart', 'link' : './orders.html'},
+        {'name': 'Баланс и переводы', 'icon' : 'university', 'link' : './balance.html'},
         {'name': 'Администратор', 'icon' : 'calculator', 'link' : '#'},
-        {'name': 'Выход', 'icon' : 'sign-in', 'link' : '#'}
+        {'name': 'Выход', 'icon' : 'sign-in', 'link' : './login.html'}
     ];
-nav.nav.list-group.list-group-flush.navbar.navbar-expand-lg.navbar-light
+nav.nav.list-group.list-group-flush.navbar.navbar-expand-lg.navbar-light.pt-0.my-0
     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarProf" aria-controls="navbarProf" aria-expanded="false")
         span.navbar-toggler-icon
-    .collapse.navbar-collapse#navbarProf
+    .collapse.navbar-collapse#navbarProf.w-100
         .navbar-nav.flex-column
             each val, index in arr
                 a(href=val.link).nav-link.nav-item.list-group-item.list-group-item-action

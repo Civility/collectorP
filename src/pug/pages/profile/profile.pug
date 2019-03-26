@@ -1,13 +1,12 @@
 .card.card-profile
     .card-body
         .row
-            .col-4.border-right
+            .col-md-4.border-right
                 include ./personally.pug
-            .col-8
+            .col-md-8
                 include ./address.pug
-
-.card-password
-    .card-body
-        .row
-            .col-12
+.row
+    .col-md-12.col-lg-6
+        .card.card-password
+            .card-body
                 include ./password.pug

@@ -1,0 +1,58 @@
+.balacne-page {
+    .card-transfer, .card-balance  {
+        @extend .card-password;
+        .title-left {
+            @extend .mb-3;
+            @extend .h4;
+        }
+    }
+    .balacne-menu{
+        @extend .profile-menu;
+    }
+    .title-left {
+        @extend .text-lowercase;
+        @extend %letter;
+    }
+    .card-balance {
+        .card-footer{
+            @extend .bg-white;
+            @extend .ml-auto;
+        }
+    }
+    .send-transfer {
+        @extend .d-flex;
+        @extend .justify-content-end;
+    }
+    .card-history {
+        @extend .shadow;
+    }
+    thead {
+        tr {
+            @extend .border-bottom;
+            @extend .border-dark;
+        }
+    }
+    tbody {
+        tr {
+            td {
+                &:last-child {
+                    @extend .text-danger;
+                }
+            }
+            &:nth-child(3n+2) {
+                td {
+                    &:last-child {
+                        @extend .text-success;
+                    }
+                }
+            }
+        }
+    }
+    .send-history {
+        .btn {
+            @extend .text-dark;
+            @extend .mt-5;
+            @extend .mb-3;
+        }
+    }
+}
